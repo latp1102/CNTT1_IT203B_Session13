@@ -37,7 +37,7 @@ public class HosptitalSer {
 
             int row2 = ps2.executeUpdate();
             if (row2 == 0) {
-                throw new SQLException("Không tìm thấy giường!");
+                throw new SQLException("Không tìm thấy giường");
             }
             String sqlPatient = "UPDATE patient SET status = 'DISCHARGED' WHERE id = ?";
             PreparedStatement ps3 = conn.prepareStatement(sqlPatient);
