@@ -29,7 +29,7 @@ public class Hopital {
             try {
                 if (conn != null) {
                     conn.rollback();
-                    System.out.println("Rollback dữ liệu thành công!");
+                    System.out.println("Rollback dữ liệu thành công");
                 }
             } catch (Exception rollbackEx) {
                 System.out.println("Lỗi khi rollback: " + rollbackEx.getMessage());
