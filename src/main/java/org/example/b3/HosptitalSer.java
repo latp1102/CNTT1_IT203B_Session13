@@ -20,7 +20,7 @@ public class HosptitalSer {
             }
             double balance = rs.getDouble("balance");
             if (balance < tienVienPhi) {
-                throw new SQLException("Không đủ tiền thanh toán!");
+                throw new SQLException("Không đủ tiền thanh toán");
             }
             String sqlWallet = "UPDATE patient_wallet SET balance = balance - ? WHERE id = ?";
             PreparedStatement ps1 = conn.prepareStatement(sqlWallet);
