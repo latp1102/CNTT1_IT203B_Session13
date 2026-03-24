@@ -23,7 +23,7 @@ public class Hopital {
             ps2.setInt(2, medicineId);
             ps2.executeUpdate();
             conn.commit();
-            System.out.println("Cấp phát thuốc thành công!");
+            System.out.println("Cấp phát thuốc thành công");
         } catch (Exception e) {
             System.out.println("Có lỗi xảy ra: " + e.getMessage());
             try {
