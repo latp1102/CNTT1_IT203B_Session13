@@ -16,7 +16,7 @@ public class HosptitalSer {
             psCheck.setInt(1, maBenhNhan);
             ResultSet rs = psCheck.executeQuery();
             if (!rs.next()) {
-                throw new SQLException("Không tìm thấy bệnh nhân!");
+                throw new SQLException("Không tìm thấy bệnh nhân");
             }
             double balance = rs.getDouble("balance");
             if (balance < tienVienPhi) {
@@ -45,17 +45,17 @@ public class HosptitalSer {
 
             int row3 = ps3.executeUpdate();
             if (row3 == 0) {
-                throw new SQLException("Không cập nhật được bệnh nhân!");
+                throw new SQLException("Không cập nhật được bệnh nhân");
             }
             conn.commit();
-            System.out.println("Xuất viện và thanh toán thành công!");
+            System.out.println("Xuất viện và thanh toán thành công");
 
         } catch (SQLException e) {
             System.out.println("Lỗi: " + e.getMessage());
             if (conn != null) {
                 try {
                     conn.rollback();
-                    System.out.println("Đã rollback giao dịch!");
+                    System.out.println("Đã rollback giao dịch");
                 } catch (SQLException ex) {
                     System.out.println("Lỗi rollback: " + ex.getMessage());
                 }
